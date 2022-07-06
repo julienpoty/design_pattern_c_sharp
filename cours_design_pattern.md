@@ -114,3 +114,6 @@ Permet de construire une chaine d'objets de manière à ce que si un objet de la
 il puisse la passer à un "successeur" et ainsi de suite jusqu'à ce que l'un des objets puissent y répondre.
 
 
+### Command
+
+Ce pattern transforme une requête en objet ceci facilite les opérations relatives à la requête ex: annulation, queue, suivi, etc...
