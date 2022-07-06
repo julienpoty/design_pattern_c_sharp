@@ -117,3 +117,7 @@ il puisse la passer à un "successeur" et ainsi de suite jusqu'à ce que l'un de
 ### Command
 
 Ce pattern transforme une requête en objet ceci facilite les opérations relatives à la requête ex: annulation, queue, suivi, etc...
+
+### Mediator
+
+Permet de construire un objet qui controle les interractions entre plusieurs autres objets, sans que les objets ne se connaissent mutuellements
