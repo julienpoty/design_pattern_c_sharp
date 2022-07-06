@@ -63,3 +63,23 @@ Ces patterns mettent en avant les interfaces.
 Permet de convertir l'interface d'une classe donnée en une interface attendue par des clients afin qu'il puissent travailler.
 
 En résumé, il permet de donner à une classe existante une nouvelle interface pour répondre aux besoins d'un client.
+
+### Bridge
+
+Permet de séparer le comportement de l'implémentation de l'interface et de l'implémentation de l'objet
+
+Exemple : on s'intéresse au demande d'immatriculation des véhicules.
+
+Le formulaire de demande d'immatriculation possède deux implémentations différentes
+
+FormulaireImmat
+
+FormulaireImmatHTML
+FormulaireImmatAPP
+
+Au départ le système a été conçu pour la France uniquement
+Ensuite on a du créé une sous-classe FormulaireImmatCH
+Elle aussi est abstraite pour avoir également deux sous-classes concrètes (qui sont FormulaireImmatHTML et FormulaireImmatAPP dédiées à la Suisse)
+
+### Composite
+
