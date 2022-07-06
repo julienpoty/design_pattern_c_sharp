@@ -20,7 +20,8 @@ Quel que soit l'implémentation des méthodes le client ne va dialoguer qu'avec 
 
 On distingue la logique métier de l'implémentation des méthodes.
 
-Un client a besoin de construire des objets complexes sans avoir besoin de connaître leur implémentation ou construire des objets avec différentes implémentations
+Un client a besoin de construire des objets complexes sans avoir besoin de connaître leur implémentation 
+ou construire des objets avec différentes implémentations
 
 ### Factory Method
 
@@ -44,9 +45,11 @@ Permet la création d'objets à partir d'autres objets appelés "prototpes" disp
 
 ## Composition VS Héritage
 
-La Composition est le fait d'avoir une instance d'une classe dans une instance d'une autre classe, ainsi l'objet "englobant" peut interragir directement avec l'objet "englobé".
+La Composition est le fait d'avoir une instance d'une classe dans une instance d'une autre classe, 
+ainsi l'objet "englobant" peut interragir directement avec l'objet "englobé".
 
-L'héritage permet a une classe d'hériter des comportements ou des propriétés d'une autre classe, appelée classe mère, sans avoir a redéfinir ces comportements. la classe qui hérite des comportements est appelée classe fille.
+L'héritage permet a une classe d'hériter des comportements ou des propriétés d'une autre classe, appelée classe mère, 
+sans avoir a redéfinir ces comportements. la classe qui hérite des comportements est appelée classe fille.
 
 ## Structural Patterns
 
@@ -79,17 +82,35 @@ FormulaireImmatAPP
 
 Au départ le système a été conçu pour la France uniquement
 Ensuite on a du créé une sous-classe FormulaireImmatCH
-Elle aussi est abstraite pour avoir également deux sous-classes concrètes (qui sont FormulaireImmatHTML et FormulaireImmatAPP dédiées à la Suisse)
+Elle aussi est abstraite pour avoir également deux sous-classes concrètes 
+(qui sont FormulaireImmatHTML et FormulaireImmatAPP dédiées à la Suisse)
 
 ### Composite
 
-Offre un cadre de conception d'une composition d'objet dont on ne connait pas la profondeur. (On peut utilisaer un arbre en tant qu'analogie).
+Offre un cadre de conception d'une composition d'objet dont on ne connait pas la profondeur. 
+(On peut utilisaer un arbre en tant qu'analogie).
 
 Les "clients" interagissent avec les objets sans connaitre la structure de l'arbre.
 
 ### Decorator 
 
-Permet d'ajouter dynamiquement des fonctionnalités supplémentaires à un objet sans modifier l'interface de l'objet ("les clients de l'objet ne sont pas au courant de la modification")
+Permet d'ajouter dynamiquement des fonctionnalités supplémentaires à un objet sans modifier l'interface de l'objet 
+("les clients de l'objet ne sont pas au courant de la modification")
 
 Il s'agit d'une alternative à la création d'une sous-classe qui permettrait d'enreigchir l'objet.
+
+
+## Behavioral Patterns
+
+Les patterns de comportement  distribuent les algorithmes/traitements entre les objets.
+
+Ils organisent les interactions en renseignant le "flux de controle" et de traitement au sein d'un système d'objets
+
+La distribution se fait soit par Héritage soit par "délégation"
+
+### Chain of Responsability
+
+Permet de construire une chaine d'objets de manière à ce que si un objet de la chaîne ne peut répondre à une requête, 
+il puisse la passer à un "successeur" et ainsi de suite jusqu'à ce que l'un des objets puissent y répondre.
+
 
