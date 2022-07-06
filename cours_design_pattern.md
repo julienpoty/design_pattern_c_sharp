@@ -83,6 +83,13 @@ Elle aussi est abstraite pour avoir également deux sous-classes concrètes (qui
 
 ### Composite
 
-Ce pattern offre un cadre de conception d'une composition d'objet dont on ne connait pas la profondeur. (On peut utilisaer un arbre en tant qu'analogie).
+Offre un cadre de conception d'une composition d'objet dont on ne connait pas la profondeur. (On peut utilisaer un arbre en tant qu'analogie).
 
 Les "clients" interagissent avec les objets sans connaitre la structure de l'arbre.
+
+### Decorator 
+
+Permet d'ajouter dynamiquement des fonctionnalités supplémentaires à un objet sans modifier l'interface de l'objet ("les clients de l'objet ne sont pas au courant de la modification")
+
+Il s'agit d'une alternative à la création d'une sous-classe qui permettrait d'enreigchir l'objet.
+
