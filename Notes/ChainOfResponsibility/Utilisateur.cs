@@ -15,7 +15,7 @@ public class Utilisateur
     vehicule2.suivant = modele1;
     Console.WriteLine(vehicule2.donneDescription());
     ObjetBase marque1 = new Marque("Auto++", 
-      "La marque des autos", "de grande qualité");
+      "La marque des autos", "de grande qualit");
     ObjetBase modele2 = new Modele("KT700", null);
     modele2.suivant = marque1;
     ObjetBase vehicule3 = new Vehicule(null);

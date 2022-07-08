@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Command;
 
 public class CommandeSolder
