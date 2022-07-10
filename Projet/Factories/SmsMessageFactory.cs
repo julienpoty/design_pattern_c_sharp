@@ -21,6 +21,6 @@ public class SmsMessageFactory : IAbstractMessageFactory
             .Build();
 
     public IMessage CreatePromoCodeMessage => builder
-            .SetMessage("Profitez de $montant euros de réduction avec le code $codePromo.")
+            .SetMessage("Profitez de $montant euros de réduction avec le code $PromoCode.")
             .Build();
 }

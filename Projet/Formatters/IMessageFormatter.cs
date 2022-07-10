@@ -4,7 +4,7 @@ namespace Formatters;
 
 public interface IMessageFormatter<TMessage, TMessageContext> 
     where TMessage : IMessage
-    where TMessageContext : IMessageContext
+    where TMessageContext : IMessageContext<TMessage>
 {
     void Format(TMessage message, TMessageContext messageContext);
 }

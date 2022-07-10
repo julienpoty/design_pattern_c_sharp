@@ -2,8 +2,8 @@ using Models.Interfaces;
 
 namespace Models.Entities;
 
-public class SmsContext : IMessageContext
+public class SmsContext : IMessageContext<Sms>
 {
-    public List<string> Recepients { get; set; }
-    public Dictionary<string, string> Data { get; set; }
+    public string Recepient { get; set; }
+    public Dictionary<string, string> Data { get; set; } = new();
 }

@@ -8,7 +8,7 @@ namespace Bridges;
 
 public abstract class SendMessageBridge<TMessage, TMessageContext> 
     where TMessage : IMessage 
-    where TMessageContext : IMessageContext
+    where TMessageContext : IMessageContext<TMessage>
 {
     protected TMessage message;
     protected IMessageFormatter<TMessage, TMessageContext> messageFormatter;
@@ -16,9 +16,11 @@ public abstract class SendMessageBridge<TMessage, TMessageContext>
 
     public void Send(TMessageContext messageContext)
     {
-        messageFormatter.Format(message, messageContext);
+        TMessage newMessage = (TMessage)message.DeepCopy();
 
-        messageServer.Send(message);
+        messageFormatter.Format(newMessage, messageContext);
+
+        messageServer.Send(newMessage);
     }
 
     protected TMessage GetMessage(IAbstractMessageFactory messageFactory, EClientTypeMessage messageClient)

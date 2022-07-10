@@ -6,6 +6,6 @@ public class NotificationMessageFormatter : IMessageFormatter<Notification, Noti
 {
     public void Format(Notification message, NotificationContext messageContext)
     {
-
+        message.UserTag = messageContext.UserTag;
     }
 }

@@ -8,4 +8,11 @@ public class Sms : IMessage
     public string Recepient { get; set; }
     public string MediaURL { get; set; }
     public string Content { get; set; }
+
+    public IMessage DeepCopy()
+    {
+        Sms newSms = (Sms) this.MemberwiseClone();        
+
+        return newSms;
+    }
 }

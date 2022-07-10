@@ -35,6 +35,12 @@ public class MailBuilder : IMessageBuilder<Mail>
         return this;
     }
 
+    public MailBuilder SetBodyText(string body)
+    {
+        _message.BodyText = body;
+        return this;
+    }
+
     public MailBuilder SetSignature(string signature)
     {
         _message.BodyHtml.Replace("$signature", signature);
