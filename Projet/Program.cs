@@ -1,9 +1,5 @@
-﻿using Bridges;
-using Commands;
+﻿using Commands;
 using Facade;
-using Factories;
-using Formatters;
-using MessageServer;
 using Models.Entities;
 using Models.Enums;
 using Models.Interfaces;
@@ -12,13 +8,6 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-
-        SendSmsMessageBridge bridge = new SendSmsMessageBridge(
-            EClientTypeMessage.CancelledOrder,
-            new SmsMessageFactory(),
-            new SmsMessageFormatter(),
-            new SmsMessageServer()
-        );
 
         ClientMessageContext clientMessageContext = new()
         {
